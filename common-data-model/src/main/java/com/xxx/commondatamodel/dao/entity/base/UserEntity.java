@@ -8,4 +8,6 @@ import lombok.Data;
 public class UserEntity {
     private String id;
     private String name;
+
+    private Integer consumptionLevel; // 消费等级
 }

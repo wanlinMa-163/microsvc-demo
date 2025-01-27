@@ -9,4 +9,5 @@ import "common.proto";
 
 service User {
   rpc queryPage (GrpcReq) returns (GrpcResp) {}
+  rpc updateConsumptionLevel (GrpcReq) returns (GrpcResp) {}
 }
