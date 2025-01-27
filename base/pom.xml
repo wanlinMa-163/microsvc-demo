@@ -14,7 +14,7 @@
     <dependencies>
         <dependency>
             <groupId>com.xxx</groupId>
-            <artifactId>grpc-inter</artifactId>
+            <artifactId>common-data-model</artifactId>
             <version>${revision}</version>
         </dependency>
 

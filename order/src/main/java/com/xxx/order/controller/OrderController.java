@@ -1,18 +1,22 @@
 package com.xxx.order.controller;
 
-import com.xxx.grpcinter.grpc.GreeterGrpc;
-import com.xxx.grpcinter.grpc.HelloRequest;
-import com.xxx.grpcinter.grpc.HelloResponse;
-import io.grpc.Channel;
-import net.devh.boot.grpc.client.inject.GrpcClient;
+import com.xxx.base.dto.ApiResult;
+import com.xxx.base.dto.UserQueryPageReq;
+import com.xxx.base.dto.UserQueryPageResp;
+import com.xxx.order.svc.OrderSvc;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/order")
+@Slf4j
 public class OrderController {
 
-    @GrpcClient("greeter-service")
-    private Channel channel;
+    @Autowired
+    private OrderSvc orderSvc;
 
     @RequestMapping("/test")
     public String test() {
@@ -21,12 +25,8 @@ public class OrderController {
 
     @GetMapping("/hello")
     @ResponseBody
-    public String sayHello() {
-        String name = "mawl";
-        GreeterGrpc.GreeterBlockingStub stub = GreeterGrpc.newBlockingStub(channel);
-        HelloRequest request = HelloRequest.newBuilder().setName(name).build();
-        HelloResponse response = stub.sayHello(request);
-        return response.getMessage();
+    public ApiResult<List<UserQueryPageResp>> queryPage(@RequestBody UserQueryPageReq req) {
+        return orderSvc.queryPage(req);
     }
 
 }

@@ -22,7 +22,7 @@
     <modules>
         <module>base</module>
         <module>order</module>
-        <module>grpc-inter</module>
+        <module>common-data-model</module>
     </modules>
 
     <dependencyManagement>
@@ -67,6 +67,10 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
         </dependency>
     </dependencies>
     <build>
