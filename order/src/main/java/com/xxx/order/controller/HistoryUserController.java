@@ -11,29 +11,17 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/order")
+@RequestMapping("/history")
 @Slf4j
-public class OrderController {
+public class HistoryUserController {
 
     @Autowired
     private OrderSvc orderSvc;
 
-    @RequestMapping("/test")
-    public String test() {
-        return "order";
-    }
-
-    @GetMapping("/grpcTestA")
+    @GetMapping("/userList")
     @ResponseBody
-    public ApiResult<List<UserQueryPageResp>> queryPage(@RequestBody UserQueryPageReq req) {
-        return orderSvc.queryPage(req);
+    public ApiResult<List<UserQueryPageResp>> userList(@RequestBody UserQueryPageReq req) {
+        return orderSvc.userList(req);
     }
-
-    @GetMapping("/constantTestA")
-    @ResponseBody
-    public ApiResult<?> constantTestA() {
-        return orderSvc.constantTestA();
-    }
-
 
 }

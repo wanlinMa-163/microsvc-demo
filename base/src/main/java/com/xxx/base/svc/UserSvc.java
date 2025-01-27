@@ -1,22 +1,29 @@
 package com.xxx.base.svc;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.xxx.commondatamodel.dao.entity.base.UserEntity;
+import com.xxx.commondatamodel.dao.mapper.base.UserMapper;
 import com.xxx.commondatamodel.domain.dto.ApiResult;
 import com.xxx.commondatamodel.domain.req.base.UserQueryPageReq;
 import com.xxx.commondatamodel.domain.resp.base.UserQueryPageResp;
+import com.xxx.commondatamodel.util.JacksonUtil;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.LinkedList;
 import java.util.List;
 
-@Service
 @Slf4j
+@Service
 public class UserSvc {
 
-    public ApiResult<List<UserQueryPageResp>> queryPage(UserQueryPageReq request){
-        List<UserQueryPageResp> respList = new LinkedList<>();
-        respList.add(new UserQueryPageResp("001","mawl"));
-        respList.add(new UserQueryPageResp("002","jsh"));
-        return ApiResult.success(respList);
+    @Autowired
+    private UserMapper userMapper;
+
+    public ApiResult<List<UserQueryPageResp>> queryPage(UserQueryPageReq req){
+        List<UserEntity> userEntities = userMapper.listUser(req);
+        List<UserQueryPageResp> respResult = JacksonUtil.convertObjNoExp(userEntities, new TypeReference<>() {
+        });
+        return ApiResult.success(respResult);
     }
 }

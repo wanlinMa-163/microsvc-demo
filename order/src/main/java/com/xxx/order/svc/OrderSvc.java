@@ -19,25 +19,18 @@ import java.util.List;
 @Service
 public class OrderSvc {
 
-    @GrpcClient("base")
+    @GrpcClient(CommonConstant.AppName.BASE)
     private UserGrpc.UserBlockingStub userBlockingStub;
 
-    public ApiResult<List<UserQueryPageResp>> queryPage(UserQueryPageReq req) {
-        // log.info("请求入参: {}", req);
+    public ApiResult<List<UserQueryPageResp>> userList(UserQueryPageReq req) {
+        log.info("请求入参: {}", req);
         GrpcReq grpcReq = GrpcReq.newBuilder().setParams(JacksonUtil.toStr(req)).build();
-        // long start = System.currentTimeMillis();
+        long start = System.currentTimeMillis();
         GrpcResp grpcResp = userBlockingStub.queryPage(grpcReq);
-        // long end = System.currentTimeMillis();
-        // log.info("耗时: {}", end - start);
+        long end = System.currentTimeMillis();
+        log.info("耗时: {}", end - start);
         ApiResult<List<UserQueryPageResp>> apiResult = JacksonUtil.toComplexObj(grpcResp.getData(), new TypeReference<>() {
         });
-        // log.info("请求出参: {}", apiResult);
         return apiResult;
-    }
-
-    public ApiResult<?> constantTestA() {
-        System.out.println(CommonConstant.UserType.USER_TYPE_NAME_MAP);
-        System.out.println(CommonConstant.SexType.MAN);
-        return ApiResult.success(null);
     }
 }

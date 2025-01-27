@@ -18,4 +18,11 @@ public class CommonConstant {
         private UserType() {
         }
     }
+
+    // spring.application.name
+    public static class AppName{
+        private AppName() {
+        }
+        public static final String BASE = "base";
+    }
 }
