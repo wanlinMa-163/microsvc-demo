@@ -1,4 +1,4 @@
-package com.xxx.base.dto;
+package com.xxx.commondatamodel.domain.req.base;
 
 import lombok.Data;
 import lombok.experimental.Accessors;

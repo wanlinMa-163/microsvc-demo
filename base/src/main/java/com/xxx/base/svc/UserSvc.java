@@ -1,8 +1,8 @@
 package com.xxx.base.svc;
 
-import com.xxx.base.dto.ApiResult;
-import com.xxx.base.dto.UserQueryPageReq;
-import com.xxx.base.dto.UserQueryPageResp;
+import com.xxx.commondatamodel.domain.dto.ApiResult;
+import com.xxx.commondatamodel.domain.req.base.UserQueryPageReq;
+import com.xxx.commondatamodel.domain.resp.base.UserQueryPageResp;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 

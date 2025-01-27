@@ -1,13 +1,13 @@
 package com.xxx.order.svc;
 
 import com.fasterxml.jackson.core.type.TypeReference;
-import com.xxx.base.dto.ApiResult;
-import com.xxx.base.dto.UserQueryPageReq;
-import com.xxx.base.dto.UserQueryPageResp;
 import com.xxx.base.grpc.GrpcReq;
 import com.xxx.base.grpc.GrpcResp;
 import com.xxx.base.grpc.UserGrpc;
-import com.xxx.base.util.JacksonUtil;
+import com.xxx.commondatamodel.domain.dto.ApiResult;
+import com.xxx.commondatamodel.domain.req.base.UserQueryPageReq;
+import com.xxx.commondatamodel.domain.resp.base.UserQueryPageResp;
+import com.xxx.commondatamodel.util.JacksonUtil;
 import io.grpc.Channel;
 import lombok.extern.slf4j.Slf4j;
 import net.devh.boot.grpc.client.inject.GrpcClient;

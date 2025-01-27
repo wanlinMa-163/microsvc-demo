@@ -1,4 +1,4 @@
-package com.xxx.base.constant;
+package com.xxx.commondatamodel.constant;
 
 import org.springframework.stereotype.Component;
 

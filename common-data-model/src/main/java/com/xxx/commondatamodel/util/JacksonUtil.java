@@ -1,4 +1,4 @@
-package com.xxx.base.util;
+package com.xxx.commondatamodel.util;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.DeserializationFeature;

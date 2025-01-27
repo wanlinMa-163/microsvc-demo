@@ -1,4 +1,4 @@
-package com.xxx.base.dto;
+package com.xxx.commondatamodel.domain.dto;
 
 import lombok.Builder;
 import lombok.Data;

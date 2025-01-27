@@ -1,4 +1,4 @@
-package com.xxx.base.dto;
+package com.xxx.commondatamodel.domain.resp.base;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
