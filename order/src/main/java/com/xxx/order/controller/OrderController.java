@@ -23,10 +23,17 @@ public class OrderController {
         return "order";
     }
 
-    @GetMapping("/hello")
+    @GetMapping("/grpcTestA")
     @ResponseBody
     public ApiResult<List<UserQueryPageResp>> queryPage(@RequestBody UserQueryPageReq req) {
         return orderSvc.queryPage(req);
     }
+
+    @GetMapping("/constantTestA")
+    @ResponseBody
+    public ApiResult<?> constantTestA() {
+        return orderSvc.constantTestA();
+    }
+
 
 }
