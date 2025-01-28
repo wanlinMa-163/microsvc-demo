@@ -9,7 +9,6 @@ import com.xxx.commondatamodel.domain.req.base.UserUpdateConsumptionLevelReq;
 import com.xxx.commondatamodel.domain.resp.base.UserQueryPageResp;
 import com.xxx.commondatamodel.util.JacksonUtil;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.seata.spring.annotation.GlobalTransactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -29,7 +28,8 @@ public class UserSvc {
         return ApiResult.success(respResult);
     }
 
-    @GlobalTransactional
+    // @GlobalTransactional // 只要包含在 GlobalTransactional 被调用的方法里，就可以正常提交进行全局事务管理，所以@GlobalTransactional 可以不用写
+    // @Transactional // 只要包含在 GlobalTransactional 被调用的方法里，写 @Transactional 也不会被影响，也会被全局事务管理
     public ApiResult<?> updateConsumptionLevel(UserUpdateConsumptionLevelReq req) {
         String userId = req.getUserId();
         Integer consumptionLevel = userMapper.selectById(userId).getConsumptionLevel();

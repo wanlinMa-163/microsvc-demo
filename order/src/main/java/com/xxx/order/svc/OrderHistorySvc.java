@@ -65,7 +65,7 @@ public class OrderHistorySvc {
         });
 
         // 抛出异常
-        throw new RuntimeException("异常");
-        // return apiResult;
+        // throw new RuntimeException("异常");
+        return apiResult;
     }
 }

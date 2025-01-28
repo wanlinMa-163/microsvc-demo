@@ -23,6 +23,7 @@
         <module>base</module>
         <module>order</module>
         <module>common-data-model</module>
+        <module>gateway</module>
     </modules>
 
     <dependencyManagement>
