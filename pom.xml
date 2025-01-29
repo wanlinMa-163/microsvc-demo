@@ -22,8 +22,10 @@
     <modules>
         <module>base</module>
         <module>order</module>
-        <module>common-data-model</module>
+        <module>data-model</module>
         <module>gateway</module>
+        <module>sso</module>
+        <module>common</module>
     </modules>
 
     <dependencyManagement>

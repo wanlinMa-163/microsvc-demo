@@ -1,14 +1,14 @@
 package com.xxx.base.svc.grpc;
 
 import com.xxx.base.svc.UserSvc;
-import com.xxx.commondatamodel.domain.dto.ApiResult;
-import com.xxx.commondatamodel.domain.req.base.UserQueryPageReq;
-import com.xxx.commondatamodel.domain.req.base.UserUpdateConsumptionLevelReq;
-import com.xxx.commondatamodel.domain.resp.base.UserQueryPageResp;
-import com.xxx.commondatamodel.grpc.GrpcReq;
-import com.xxx.commondatamodel.grpc.GrpcResp;
-import com.xxx.commondatamodel.grpc.UserGrpc;
-import com.xxx.commondatamodel.util.JacksonUtil;
+import com.xxx.common.util.JacksonUtil;
+import com.xxx.datamodel.domain.dto.ApiResult;
+import com.xxx.datamodel.domain.req.base.UserQueryPageReq;
+import com.xxx.datamodel.domain.req.base.UserUpdateConsumptionLevelReq;
+import com.xxx.datamodel.domain.resp.base.UserQueryPageResp;
+import com.xxx.datamodel.grpc.GrpcReq;
+import com.xxx.datamodel.grpc.GrpcResp;
+import com.xxx.datamodel.grpc.UserGrpc;
 import io.grpc.stub.StreamObserver;
 import lombok.extern.slf4j.Slf4j;
 import net.devh.boot.grpc.server.service.GrpcService;

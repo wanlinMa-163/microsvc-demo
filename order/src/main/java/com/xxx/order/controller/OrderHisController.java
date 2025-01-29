@@ -1,7 +1,7 @@
 package com.xxx.order.controller;
 
-import com.xxx.commondatamodel.domain.dto.ApiResult;
-import com.xxx.commondatamodel.domain.req.order.OrderHisAddReq;
+import com.xxx.datamodel.domain.dto.ApiResult;
+import com.xxx.datamodel.domain.req.order.OrderHisAddReq;
 import com.xxx.order.svc.OrderHistorySvc;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,13 +1,13 @@
 package com.xxx.base.svc;
 
 import com.fasterxml.jackson.core.type.TypeReference;
-import com.xxx.commondatamodel.dao.entity.base.UserEntity;
-import com.xxx.commondatamodel.dao.mapper.base.UserMapper;
-import com.xxx.commondatamodel.domain.dto.ApiResult;
-import com.xxx.commondatamodel.domain.req.base.UserQueryPageReq;
-import com.xxx.commondatamodel.domain.req.base.UserUpdateConsumptionLevelReq;
-import com.xxx.commondatamodel.domain.resp.base.UserQueryPageResp;
-import com.xxx.commondatamodel.util.JacksonUtil;
+import com.xxx.common.util.JacksonUtil;
+import com.xxx.datamodel.dao.entity.base.UserEntity;
+import com.xxx.datamodel.dao.mapper.base.UserMapper;
+import com.xxx.datamodel.domain.dto.ApiResult;
+import com.xxx.datamodel.domain.req.base.UserQueryPageReq;
+import com.xxx.datamodel.domain.req.base.UserUpdateConsumptionLevelReq;
+import com.xxx.datamodel.domain.resp.base.UserQueryPageResp;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
