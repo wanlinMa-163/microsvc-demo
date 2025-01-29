@@ -9,7 +9,8 @@
         <version>${revision}</version>
     </parent>
 
-    <artifactId>sso</artifactId>
+    <artifactId>dmodel</artifactId>
+    <description>此模块存放公用工具类，grpc,mybatis是所有模块的基础模块</description>
 
     <dependencies>
         <dependency>
@@ -18,10 +19,16 @@
             <version>${revision}</version>
         </dependency>
 
+        <!-- mybatis plus-->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
+            <version>3.5.10.1</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.33</version>
         </dependency>
     </dependencies>
-
 </project>

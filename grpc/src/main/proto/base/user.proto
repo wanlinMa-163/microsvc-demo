@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.xxx.grpc";
+option java_outer_classname = "UserProto";
+
+// 安装插件 protocol buffers 不然会报红
+import "common.proto";
+
+service User {
+  rpc queryPage (GrpcReq) returns (GrpcResp) {}
+  rpc updateConsumptionLevel (GrpcReq) returns (GrpcResp) {}
+}

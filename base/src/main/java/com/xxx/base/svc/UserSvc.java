@@ -2,12 +2,12 @@ package com.xxx.base.svc;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.xxx.common.util.JacksonUtil;
-import com.xxx.datamodel.dao.entity.base.UserEntity;
-import com.xxx.datamodel.dao.mapper.base.UserMapper;
-import com.xxx.datamodel.domain.dto.ApiResult;
-import com.xxx.datamodel.domain.req.base.UserQueryPageReq;
-import com.xxx.datamodel.domain.req.base.UserUpdateConsumptionLevelReq;
-import com.xxx.datamodel.domain.resp.base.UserQueryPageResp;
+import com.xxx.dmodel.dao.entity.base.UserEntity;
+import com.xxx.dmodel.dao.mapper.base.UserMapper;
+import com.xxx.dmodel.domain.dto.ApiResult;
+import com.xxx.dmodel.domain.req.base.UserQueryPageReq;
+import com.xxx.dmodel.domain.req.base.UserUpdateConsumptionLevelReq;
+import com.xxx.dmodel.domain.resp.base.UserQueryPageResp;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

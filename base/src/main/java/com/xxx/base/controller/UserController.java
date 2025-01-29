@@ -1,10 +1,10 @@
 package com.xxx.base.controller;
 
 import com.xxx.base.svc.UserSvc;
-import com.xxx.datamodel.domain.dto.ApiResult;
-import com.xxx.datamodel.domain.req.base.UserQueryPageReq;
-import com.xxx.datamodel.domain.req.base.UserUpdateConsumptionLevelReq;
-import com.xxx.datamodel.domain.resp.base.UserQueryPageResp;
+import com.xxx.dmodel.domain.dto.ApiResult;
+import com.xxx.dmodel.domain.req.base.UserQueryPageReq;
+import com.xxx.dmodel.domain.req.base.UserUpdateConsumptionLevelReq;
+import com.xxx.dmodel.domain.resp.base.UserQueryPageResp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

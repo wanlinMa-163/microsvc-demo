@@ -22,10 +22,11 @@
     <modules>
         <module>base</module>
         <module>order</module>
-        <module>data-model</module>
+        <module>dmodel</module>
         <module>gateway</module>
         <module>sso</module>
         <module>common</module>
+        <module>grpc</module>
     </modules>
 
     <dependencyManagement>
