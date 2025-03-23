@@ -27,7 +27,6 @@
         <module>sso</module>
         <module>common</module>
         <module>grpc</module>
-        <module>keycloak-provider</module>
     </modules>
 
     <dependencyManagement>
